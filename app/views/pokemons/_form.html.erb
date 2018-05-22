@@ -1,0 +1,12 @@
+<%= form_with(model: @pokemon, local: true) do |form| %>
+  <div class="row">
+    <div class="form-group col-lg-5">
+      <%= form.label :name, 'Nom' %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Enregistrer', class: 'btn btn-primary' %>
+  </div>
+<% end %>

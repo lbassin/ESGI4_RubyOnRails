@@ -1,0 +1,24 @@
+<h1>Liste des pokemons</h1>
+
+<% if @pokemons.any? %>
+  <table class="table">
+    <head>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+      </tr>
+    </head>
+    <body>
+    <% @pokemons.each do |pokemon| %>
+      <tr>
+        <td><%= pokemon.id %></td>
+        <td><%= pokemon.name %></td>
+      </tr>
+    <% end %>
+    </body>
+  </table>
+<% else %>
+  <p>
+    Pas de pokemon
+  </p>
+<% end %>
